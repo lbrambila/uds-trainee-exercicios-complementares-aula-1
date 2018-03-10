@@ -27,6 +27,38 @@
         #menu ul li a:hover {
           color:#00FFFF;
         }
+        label {
+          display: flex;
+          color:#0B0B61;
+          font-family:Segoe UI;
+        }
+        fieldset {
+          margin:80px;
+          color: black;
+          font-weight:bold;
+          font-family:Segoe UI;
+        }
+        input:hover {
+          border: 2px solid #CEF6F5;
+        }
+        #imsg:hover {
+          border: 2px solid #CEF6F5;
+        }
+        .dentro-caixa {
+          color:#848484;
+          font-family:Segoe UI;
+          font-size: 12px;
+        }
+        .botão {
+          background-color: #585858;
+          color: black;
+          border: 1px;
+          font-family:Segoe UI;
+          font-size: 15px;
+        }
+        .botão:hover {
+          color: #00FFFF;
+        }
     </style>
   </head>
   <body>
@@ -36,5 +68,17 @@
         <li> <a href="Sobre.html">Sobre</a> </li>
         <li> <a href="Contato.html">Contato</a> </li>
       </ul>
+    <form method="post" id="usuario" action="mailto:lbrambila280@gmail.com">
+      <fieldset id="cadastro"><legend>Identificação</legend>
+        <p><label for="itexto">Nome:</label> <input type="text" name="texto" id="itexto" size="25" maxlength="30" class="dentro-caixa" placeholder="Nome completo"/></p>
+        <p><label for="iemail">E-mail:</label> <input type="email" name="email" id="iemail" size="25" maxlength="45" class="dentro-caixa" placeholder="E-mail pessoal"</p>
+        <p><label for="isenha">Senha:</label> <input type="password" name="senha" id="isenha" size="8" maxlength="10" class="dentro-caixa" placeholder="10 dígitos"</p></fieldset>
+      <fieldset id="mensagem"><legend>Mensagem à Larissa</legend>
+          <p><label for="iurg">Grau de urgência:</label> Mín<input type="range" name="urg" id="iurg" min="0" max="100" step="1"/> Máx</p>
+          <p><label for="imsg">Mensagem: </label><textarea name="msg" id="imsg" cols="40" rows="6" class="dentro-caixa" placeholder="Escreva sua mensagem aqui!!"></textarea></p></fieldset>
+      <fieldset id="finalizar"><legend>Finalização</legend>
+          <input type="submit" class="botão" value="Enviar"/>
+          <input type="reset" class="botão" value="Limpar"/></fieldset>
+    </form>
   </body>
 </html>
